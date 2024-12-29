@@ -28,6 +28,9 @@ function initializeSlider () {
   }
 
 }
+
+//for slideshow
+
 function showSlide(index) {
   let i;
   let dots = document.getElementsByClassName("js-dot");
@@ -43,11 +46,41 @@ function showSlide(index) {
   });
   slides[slideIndex].classList.add('displaySlide')
 
-  for (i = 0; i < dots.length; i++) {
+  for (let i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   dots[slideIndex].className += " active";
+
+
 }
+
+//For automatic creation of the dots
+
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".slides .slide");
+  const dotsContainer = document.querySelector(".dot-container");
+
+  dotsContainer.innerHTML = "";
+
+  slides.forEach((_, index) => {
+    const dot = document.createElement("span");
+    dot.className = "dot js-dot";
+    dot.dataset.index = index;
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll('.js-dot');
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      clearInterval(intervalId); 
+      slideIndex = index; 
+      showSlide(slideIndex); 
+      intervalId = setInterval(nextSlide, 5000); // Restart the interval
+    });
+  });
+ 
+})
 
 document.querySelectorAll('.js-prev')
 .forEach((element) =>{
@@ -72,12 +105,3 @@ function nextSlide() {
   showSlide(slideIndex);
 }
 
-document.querySelectorAll('.js-dot')
-.forEach((dot, index) => {
-  dot.addEventListener('click', () => {
-    clearInterval(intervalId); 
-    slideIndex = index; 
-    showSlide(slideIndex); 
-    intervalId = setInterval(nextSlide, 5000); // Restart the interval
-  });
-});

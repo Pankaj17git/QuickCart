@@ -10,16 +10,20 @@ main {
 }
 
 .slider {
-  background-color: HSL(240, 60%, 85%);
   position: relative;
+  display: flex;
   width: 100%;
-  margin: auto;
   overflow: hidden;
   --bs-gutter-x: 0.5rem !important;
   padding: 0 !important;
   height: 600px;
 }
 
+@media (min-width: 600px) {
+  .slider {
+    width: 600px;
+  }
+}
 .slides {
   position: absolute;
   width: 100%;
@@ -60,19 +64,26 @@ img.displaySlide{
   to{opacity: 1;}
 }
 
-.dot-container {
+.slider .container{
   position: absolute;
-  bottom: 25px;
+  bottom: 0;
   width: 100%;
-  text-align: center;
-  margin: 10px;
+  height: 100px;
+  background: black;
+}
+
+.container .dot-container{
+  width: auto;
+  position: absolute;
+  top: 10%;
+  left: 43%;
 }
 
 .dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
-  margin: 0 2px;
+  margin: 5px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
