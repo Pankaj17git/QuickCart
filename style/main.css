@@ -39,6 +39,7 @@ main {
   display: none;
   
 }
+
 img.displaySlide{
   display: block;
   animation: fade 1.5s;
@@ -96,13 +97,33 @@ img.displaySlide{
 }
 
 .options {
-  height: 507px;
+  height: auto;
   background: hsl(0, 0%, 85%);
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr 1fr; 
   align-items: center;
   justify-content: space-evenly;
+
 }
+
+@media (max-width: 2000px) {
+.options{
+  grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 1069px) {
+.options{
+  grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+ .options{
+  grid-template-columns: 1fr;
+  }
+}
+
 
 .options .section{
   height: 400px;
