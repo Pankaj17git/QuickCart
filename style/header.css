@@ -15,6 +15,12 @@
     background: rgb(210, 84, 84);
 }
 
+.hidden .logo{
+    position: absolute;
+    height: 100%;
+    width: auto;
+}
+
 .nav-container .navbar {
     height: 78.4px;
     width: 100%;
