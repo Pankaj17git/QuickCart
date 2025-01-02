@@ -14,7 +14,7 @@ main {
   position: relative;
   max-width: 2000px;
   height: auto;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .slider-container .slider {
@@ -38,8 +38,7 @@ main {
   display: flex;
   width: 100%;
   height: 500px;
-  box-shadow: inset -1px -2px 20px 1px rgba(0, 0, 0, 1.3);
-  transition: transform 1s ease-in-outs;
+  box-shadow: -2px 4px 8px 1px rgb(0 0 0 / 18%);
 }
 
 .slides .slide {
@@ -120,36 +119,37 @@ img.displaySlide{
   margin-top: 10px;
   padding-top: 25px;
   height: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
+  justify-content: center;
   align-items: center;
-  justify-items: center;
 }
 
 @media (max-width: 2000px) {
-.catagories{
-  grid-template-columns: 1fr 1fr 1fr;
+  .catagories > * {
+    flex: 1 1 calc(33.33% - 10px); /* Three items per row */
   }
 }
 
 @media (max-width: 1069px) {
-.catagories{
-  grid-template-columns: 1fr 1fr;
+  .catagories > * {
+    flex: 1 1 calc(50% - 10px); /* Two items per row */
   }
 }
 
 @media (max-width: 600px) {
- .catagories{
-  grid-template-columns: 1fr;
+  .catagories > * {
+    flex: 1 1 calc(100% - 10px); /* One item per row */
   }
 }
 
-
 .catagories .section{
   position: relative;
-  height: 500px;
-  width: 400px;
+  height: 400px;
+  width: 150px;
+  flex: 1 1 calc(150px - 10px); 
+  max-width: calc(33.33% - 10px);
   border: none;
   overflow: hidden;
   filter: blur();
