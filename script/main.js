@@ -12,7 +12,7 @@ sliderHtml += `
 });
 
 document.querySelector('.js-slides') 
-  .innerHTML = sliderHtml;
+.innerHTML = sliderHtml;
 
 const slides = document.querySelectorAll('.slides img')
 let slideIndex = 0;

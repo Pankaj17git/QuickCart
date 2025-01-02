@@ -15,10 +15,11 @@
     background: rgb(210, 84, 84);
 }
 
-.hidden .logo{
+.hidden .logo {
     position: absolute;
     height: 100%;
     width: auto;
+    mix-blend-mode: multiply;
 }
 
 .nav-container .navbar {
