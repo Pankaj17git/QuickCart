@@ -1,31 +1,139 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.nav-container {
-    height:  123.4px;
-    box-shadow: -2px -1px 20px 1px rgba(0, 0, 0, 0.266);
+body {
+  font-family: Arial, sans-serif;
 }
 
-.nav-container .hidden {
-    height: 45px;
-    width: 100%;
-    background: rgb(210, 84, 84);
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  height: 85px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  z-index: 1000;
 }
 
-.hidden .logo {
-    position: absolute;
-    height: 50px;
-    width: auto;
-    mix-blend-mode: multiply;
+.left-section { 
+  display: flex;
+  align-items: center;
+  background: #007bff;
 }
 
-.nav-container .navbar {
-    height: 78.4px;
-    width: 100%;
-    box-shadow: -2px -1px 20px 1px rgba(0, 0, 0, 0.266);
-    background: hsl(43, 47%, 94%);
+.left-section .brand-container {
+  position: absolute;
+  top: -1px;
+  margin-left: 20px;
+  background: url(/logo/QuickCart.png) center left no-repeat;
+  background-size: cover;
+  width: 150px;
+  height: 80px;
+  z-index: 99;
 }
-  
+
+.middel-section{
+  flex: 1;
+  margin-left: 70px;
+  margin-right: 30px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.middel-section .search-icon-container {
+  border: 1px solid #ccc;
+  height: 42px;
+  margin-right: -1px;
+  object-fit: cover;
+}
+
+.middel-section .input-container {
+  width: 400px;
+}
+
+.search-icon-container button {
+  background: transparent;
+  border: none;
+}
+
+.search-icon-container .search-icon {
+  height: 100%;
+  width: 50px;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.right-section{
+  width: 200px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin-right: 24px;
+  margin-left: 29px;
+  flex-shrink: 0;
+  background: #ccc;
+}
+
+.search-bar {
+  position: relative;
+  left: 200px;
+  display: flex;
+}
+
+
+
+
+
+
+
+
+
+.action-item {
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.action-item:hover {
+  color: #007bff;
+}
+
+
+
+@media (max-width: 480px) {
+  .header-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .logo-container {
+    margin-bottom: 10px;
+  }
+
+  .action-item {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar .brand-container {
+    display: none;
+  }
+
+  .navbar .nav-list-container {
+    padding: 10px;
+  }
+}

@@ -136,11 +136,19 @@ img.displaySlide{
   .catagories > * {
     flex: 1 1 calc(50% - 10px); /* Two items per row */
   }
+
+  .slider-container {
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
   .catagories > * {
     flex: 1 1 calc(100% - 10px); /* One item per row */
+  }
+
+  .slider-container {
+    width: 100%;
   }
 }
 
