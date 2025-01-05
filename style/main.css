@@ -13,6 +13,7 @@ main {
 .slider-container {
   position: relative;
   max-width: 2000px;
+  margin-top: 20px;
   height: auto;
   overflow: hidden;
 }
