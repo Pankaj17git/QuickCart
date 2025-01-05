@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function initializeSlider () {
   slides[slideIndex].classList.add('displaySlide')
-  // intervalId = setInterval(nextSlide, 5000);
+   intervalId = setInterval(nextSlide, 5000);
 }
 
 //for slideshow
