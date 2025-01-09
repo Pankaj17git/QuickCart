@@ -16,7 +16,7 @@ export function renderPaymentSummary() {
     });
 
     const totalBeforeTax = productPrice + shippingPrice;
-    const tax = totalBeforeTax * 0.1;
+    const tax = totalBeforeTax * 0.05;
     const total = totalBeforeTax + tax;
 
     const cartQuantity = calculateCartQuantity();
@@ -48,7 +48,7 @@ export function renderPaymentSummary() {
         </div>
 
         <div class="payment-summary-row">
-        <div>Estimated tax (10%):</div>
+        <div>Estimated tax (5%):</div>
         <div class="payment-summary-money">&#8377;
             ${formatCurrencyRupees(tax)} 
         </div>
