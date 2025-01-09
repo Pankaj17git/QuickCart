@@ -2,7 +2,7 @@ export function renderHeader () {
     const header = `
         <div class="left-section">
         <div class="brand-container">
-          <a href="/quickCart.html">
+          <a href="quickCart.html">
             <img src="logo/QuickCart.png" alt="brand logo" class="logo brand-logo-small">
             <img src="logo/QuickCart-big.png" alt="" class="logo brand-logo-big">
           </a>
@@ -32,6 +32,7 @@ export function renderHeader () {
 
         <div class="action-item">
 
+
           <a href="/Checkout.html" style="text-decoration: none;color: black">  
           <i class="bi bi-cart3"></i>
           <svg xmlns="http://www.w3.org/2000/svg" width="17.5" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
@@ -40,6 +41,10 @@ export function renderHeader () {
 Cart
           <div style="position: relative;">
     </div>
+
+          <a href="Checkout.html" style="text-decoration: none;color: black">
+        
+
           </a>
         </div>
         <div class="action-item">
