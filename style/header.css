@@ -45,7 +45,7 @@ body {
 
 .brand-container .brand-logo-big {
   height: 90%;
-  width: 60%;
+  width: 70%;
 }
 
 .brand-container .brand-logo-small {
@@ -59,6 +59,7 @@ body {
   .brand-container .brand-logo-big {
    z-index: 1;
    opacity: 1;
+   width: 20%px;
   }
 }
 
@@ -79,7 +80,7 @@ body {
 /*search left border*/
 .middel-section .search-icon-container {
   border: 1px solid #ccc;
-  height: 40px;
+  height: 32px;
   margin-left: -1px;
   object-fit: cover;
   border-top-right-radius:20px ;
@@ -100,7 +101,7 @@ body {
 }
 
 .search-icon-container .search-icon {
-  height: 38.5px;
+  height: 30px;
   width: 40px;
   background-color: rgb(235, 244, 245);
   border-top-right-radius:20px ;
@@ -108,7 +109,7 @@ body {
 }
 
 .input-container input {
-  height: 40px;
+  height: 32px;
   width: 100%;
   padding: 8px 12px;
   border: 1px solid #0000002e;
@@ -130,7 +131,7 @@ body {
 
 .right-section{
   height: 35px;
-  width: 275px;
+  width: 495px;
   display: flex;
   justify-content: space-between; 
   align-items: center;
@@ -146,10 +147,11 @@ body {
 
 
 .right-section .action-item {
-  font-size: 14px;
-    
+  font-size: 14.7;
+    margin-top: 5px;
   color: #333;
   cursor: pointer;
+  
   
 }
 
@@ -169,6 +171,10 @@ body {
 
   .action-item {
     font-size: 10px;
+   
   }
+  /* kartik edit*/
+
+
 }
 
