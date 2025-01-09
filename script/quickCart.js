@@ -1,6 +1,7 @@
 import { renderHeader } from "./header.js";
 import {products} from "../data/product.js"
 import { addToCart } from "../data/cart.js";
+import { formatCurrencyRupees } from "./utils/money.js";
 renderHeader();
 
 let quickCartHTML = "";
@@ -29,7 +30,7 @@ products.forEach(product => {
             </div>
           </div>
 
-          <div class="product-price">&#8377;${product.priceCents}</div>
+          <div class="product-price">&#8377;${formatCurrencyRupees(product.priceCents)}</div>
 
           <div class="product-quantity-container">
             <select>
