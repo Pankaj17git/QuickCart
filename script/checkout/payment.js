@@ -1,7 +1,8 @@
 import { cart, calculateCartQuantity } from "../../data/cart.js";
-import { getProducts } from "../../data/product.js";
-import { getDeliveryOption } from "../../data/deliveryDate.js";
+import { getProducts, products } from "../../data/product.js";
+import { getDeliveryOption, } from "../../data/deliveryDate.js";
 import { formatCurrencyRupees } from "../utils/money.js";
+import {addToOrders} from "../../data/my-orders.js";
 
 export function renderPaymentSummary() {
     let productPrice = 0;
@@ -61,11 +62,18 @@ export function renderPaymentSummary() {
         </div>
         </div>
 
-        <button class="place-order-button button-primary">
+        <button class="place-order-button button-primary js-place-order"}>
         Place your order
         </button>
     `;
 
     document.querySelector('.js-payment-summary')
     .innerHTML = paymentSummaryHTML;
+
+    document.querySelector('.js-place-order')
+    .addEventListener('click', () => {  
+        addToOrders(); 
+        
+       window.location.href = 'orders.html'
+    })
 }
