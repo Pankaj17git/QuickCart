@@ -11,8 +11,8 @@ body {
 
 .header-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   position: sticky;
   top: 0;
   height: 60px;
@@ -59,7 +59,7 @@ body {
   .brand-container .brand-logo-big {
    z-index: 1;
    opacity: 1;
-   width: 20%px;
+   width: 20% px;
   }
 }
 
@@ -68,12 +68,13 @@ body {
   .brand-container .brand-logo-small {
    opacity: 1;
    z-index: 1;
+   width: 115px;
   }
 }
 
 .middel-section{
   flex: 1;
-  max-width: 500px;
+  max-width: 397px;
   display: flex;
   align-items: center;
 }
@@ -126,18 +127,27 @@ body {
   .middel-section {
     display: none;
   }
+
+  .right-section .action-item {
+    display: none;
+  }
+
+  .right-section {
+    flex: 1;
+  }
+
+ .hamburger-container {
+  display: block !important;
+ }
   
 }
 
 .right-section{
   height: 35px;
-  width: 495px;
   display: flex;
-  justify-content: space-between; 
   align-items: center;
-  margin-right: 54px;
-  margin-left: 69px;
-  flex-shrink: 0;
+  justify-content: space-between;
+  margin-right: 10px;
   background: white;
   border-top-left-radius: 40px;
   border-top-right-radius:40px ;
@@ -145,23 +155,31 @@ body {
   border-bottom-left-radius:40px ;
 }
 
-
 .right-section .action-item {
   font-size: 14.7;
-    margin-top: 5px;
-  color: #333;
-  cursor: pointer;
-  
-  
+  margin-top: 5px;
+  margin-left: 30px;
 }
 
-.action-item:hover {
-  color: #007bff;
+.hamburger-container {
+  margin-left: auto;
+  height: 100%;
+  width: 50px;
+  background:rgb(145, 146, 146);
+  border-radius: 5px;
+  display: none;
+}
+
+.hamburger-container:hover {
+  cursor: pointer;
+}
+
+.hamburger-container img {
+  transform: translate(90% , 60%);
 }
 
 @media (max-width: 480px) {
   .header-container {
-    flex-direction: column;
     padding: 10px;
   }
 
@@ -169,12 +187,38 @@ body {
     margin-bottom: 10px;
   }
 
+  .brand-container .brand-logo-small {
+    opacity: 1;
+    z-index: 1;
+    width: 85px;
+   }
+
   .action-item {
     font-size: 10px;
-   
   }
   /* kartik edit*/
-
-
 }
+
+
+.hidden-container {
+  position: absolute;
+  top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: aqua;
+  height: 100px;
+  width: 100%;
+  z-index: 1000;
+  transition: 0.2s ease-in-out;
+}
+
+.hidden-container div {
+  height: 10px;
+  margin: 5px;
+  width: 100%;
+  background: #ccc;
+}
+
 

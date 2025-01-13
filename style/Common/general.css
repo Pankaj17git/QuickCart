@@ -68,12 +68,24 @@ button {
 }
 
 .link-primary {
-    color: rgb(1, 124, 182);
+    color: black;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .link-primary:hover {
-    color: rgb(196, 80, 0);
+    color: rgb(0, 123, 255);
+}
+
+a {
+    color: black !important;
+    text-decoration: none !important;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(0, 123, 255) !important;
 }
 
 /* Styles for dropdown selectors. */
