@@ -1,0 +1,74 @@
+.service01{
+    background-color:#23424A;
+    color:white;
+    height:50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    text-decoration: none;
+    
+}
+.foot-panel2{
+    background-color: #43758A;
+    color:white;
+    height:300px;
+    display: flex;
+    justify-content: space-evenly;
+}
+ul {
+    margin-top: 0; 
+    
+}
+ul a {
+    display: block;
+    font-size: 0.80rem;
+    margin-top: 10px;
+    
+
+}
+ul p {
+    height: 15 px;
+    font-size: 1.19rem;
+    margin: 40px 0 14px 0;
+}
+.foot-panel3{
+    background-color: rgb(67, 117, 138);
+    color: white;
+    border-top: 0.5px solid white;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+   
+  
+
+
+
+.top-up {
+  
+    bottom: 20px;
+    right: 20px;
+    font-size: 18px;
+    color: rgb(254, 252, 252);  /* Set text color to red */
+    text-decoration: none;
+    background-color: transparent;  /* Make background transparent */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.top-up:hover {
+    color: rgba(47, 117, 187, 0.816);  /* Darken color on hover */
+}
+
+
+
+   
+   
+        
+     
+    
