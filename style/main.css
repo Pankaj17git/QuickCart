@@ -7,7 +7,7 @@ body{
 
 main {
   --bs-gutter-x: 0.5rem !important;
-  background: #F7F3E9;
+  background: #23424A;
 }
 
 .slider-container {
@@ -189,5 +189,6 @@ img.displaySlide{
 .information h3 {
   text-transform: uppercase;
   font-weight: bold;
+  color: beige;
 }
 
