@@ -68,11 +68,11 @@ export function totalOrderCost() {
   let shippingPrice = 0;
 
   cart.forEach((cartItem) => {
-      const product = getProducts(cartItem.productId);
-      productPrice += product.priceCents * cartItem.quantity;
+    const product = getProducts(cartItem.productId);
+    productPrice += product.priceCents * cartItem.quantity;
 
-      const deliveryOption = getDeliveryOption(cartItem. deliveryOptionId);
-      shippingPrice += deliveryOption.priceCents;
+    const deliveryOption = getDeliveryOption(cartItem. deliveryOptionId);
+    shippingPrice += deliveryOption.priceCents;
   });
 
   const totalBeforeTax = productPrice + shippingPrice;
