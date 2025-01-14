@@ -61,6 +61,10 @@ body {
    opacity: 1;
    width: 20% px;
   }
+
+  .hidden {
+    display: none;
+  }
   
 }
 
@@ -205,22 +209,36 @@ body {
 .hidden-container {
   position: absolute;
   top: 60px;
+  left: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
-  background: aqua;
-  height: 100px;
-  width: 100%;
+  background: #3d82bb;
+  backdrop-filter: blur();
   z-index: 1000;
-  transition: 0.2s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+
+.hidden {
+  display: none;
 }
 
 .hidden-container div {
-  height: 10px;
-  margin: 5px;
+  text-align: center;
   width: 100%;
-  background: #ccc;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.206);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
+@media (min-width: 801px) and (max-width: 2000px) {
+
+  .hidden-container {
+    display: none;
+  }
+  
+}
 
