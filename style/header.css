@@ -234,7 +234,7 @@ body {
   padding-bottom: 10px;
 }
 
-@media (min-width: 801px) and (max-width: 2000px) {
+@media (min-width: 980px) and (max-width: 2000px) {
 
   .hidden-container {
     display: none;
