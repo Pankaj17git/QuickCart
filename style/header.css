@@ -61,6 +61,7 @@ body {
    opacity: 1;
    width: 20% px;
   }
+  
 }
 
 /* Show the small logo for screen widths less than 800px */
@@ -163,6 +164,7 @@ body {
 
 .hamburger-container {
   margin-left: auto;
+  align-content: center;
   height: 100%;
   width: 50px;
   background:rgb(145, 146, 146);
@@ -175,7 +177,7 @@ body {
 }
 
 .hamburger-container img {
-  transform: translate(90% , 60%);
+  transform: translateX(80%);
 }
 
 @media (max-width: 480px) {

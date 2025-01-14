@@ -14,25 +14,25 @@ export const deliveryOptions = [{
   priceCents: 312
 }];
 
-export function getDeliveryOption (deliveryOptionId) {
-  
-    let deliveryOption;
-  
-    deliveryOptions.forEach((option) => {
+export function getDeliveryOption(deliveryOptionId) {
+
+  let deliveryOption;
+
+  deliveryOptions.forEach((option) => {
     if (option.id === deliveryOptionId) {
-        deliveryOption = option;
+      deliveryOption = option;
     }
-    });
+  });
 
-    return deliveryOption || deliveryOptions[0];
+  return deliveryOption || deliveryOptions[0];
 }
-  
 
-export function claculateDeliveryDate (deliveryOption) {
-    const today = dayjs();
-    const deliveryDate = today.add(deliveryOption.deliveryDays,'days');
 
-    const dateString = deliveryDate.format('dddd,MMMM D');
+export function claculateDeliveryDate(deliveryOption) {
+  const today = dayjs();
+  const deliveryDate = today.add(deliveryOption.deliveryDays, 'days');
 
-    return dateString;
+  const dateString = deliveryDate.format('dddd,MMMM D');
+
+  return dateString;
 }

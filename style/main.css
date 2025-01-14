@@ -86,17 +86,13 @@ img.displaySlide{
 
 .slider .container {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   bottom: 0;
   height: 50px;
   max-width: 2000px;
   margin: 0;
-}
-
-.container .dot-container{
-  width: auto;
-  position: absolute;
-  top: 20%;
-  left: 43%;
 }
 
 .dot {
