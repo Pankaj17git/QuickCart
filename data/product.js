@@ -599,7 +599,7 @@ export const products = [
         stars: 4,
         count: 89
       },
-      priceCents: 3390,
+      priceCents: 2390,
       keywords: [
         "shoes",
         "running shoes",
@@ -615,7 +615,7 @@ export const products = [
         stars: 4,
         count: 3
       },
-      priceCents: 10747,
+      priceCents: 8747,
       keywords: [
         "food blenders",
         "kitchen",
@@ -630,7 +630,7 @@ export const products = [
         stars: 5,
         count: 679
       },
-      priceCents: 3899,
+      priceCents: 2899,
       keywords: [
         "mixing bowls",
         "baking",
@@ -646,7 +646,7 @@ export const products = [
         stars: 4.5,
         count: 1045
       },
-      priceCents: 5799,
+      priceCents: 3799,
       keywords: [
         "kitchen",
         "kitchen towels",
