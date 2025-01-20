@@ -60,7 +60,7 @@ export function renderOrderHistory () {
           Quantity: ${productdDetails.quantity}
         </div>
 
-        <button class="buy-it-again button-primary">
+        <button class="buy-it-again js-buy-it-again button-primary" product-id="${productdDetails.id}">
           <img src="images/icons/buy-again.png" class="buy-again-image">
           <span>Buy it again</span>
         </button>
@@ -78,7 +78,16 @@ export function renderOrderHistory () {
   document.querySelector('.js-order-grid')
   .innerHTML = orderHTML;
 
-  console.log(orderHTML);
+  document.querySelectorAll('.js-buy-it-again')
+  .forEach(button => {
+    button.addEventListener('click', () => {
+      const productId = button.dataset.id;
+      const container = button.closest('.product-detail')
+
+      console.log(productId);
+      
+    })
+  });
 }
 
 renderOrderHistory();

@@ -7,4 +7,8 @@ export const slidesData = [{
 },{
   image: 'images/sliders/slider3.webp',
   alt: 'image #6',
+},
+{
+  image: 'images/sliders/homepage.webp',
+  alt: 'image #6',
 }]

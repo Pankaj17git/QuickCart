@@ -1,13 +1,6 @@
-body{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif !important;
-}
-
 main {
   --bs-gutter-x: 0.5rem !important;
-  background: #23424A;
+  padding-bottom: 10px;
 }
 
 .slider-container {
@@ -112,8 +105,8 @@ img.displaySlide{
 
 .catagories {
   position: relative;
-  margin-bottom: 100px;
   margin-top: 10px;
+  margin-bottom: 30px;
   padding-top: 25px;
   background: white;
   height: auto;
@@ -123,32 +116,6 @@ img.displaySlide{
   justify-content: center;
   align-items: center;
   box-shadow: -4px 1px 10px 1px rgb(0 0 0 / 18%);
-}
-
-@media (max-width: 2000px) {
-  .catagories > * {
-    flex: 1 1 calc(33.33% - 10px); /* Three items per row */
-  }
-}
-
-@media (max-width: 1069px) {
-  .catagories > * {
-    flex: 1 1 calc(50% - 10px); /* Two items per row */
-  }
-
-  .slider-container {
-    width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .catagories > * {
-    flex: 1 1 calc(100% - 10px); /* One item per row */
-  }
-
-  .slider-container {
-    width: 100%;
-  }
 }
 
 .catagories .section{
@@ -180,12 +147,80 @@ img.displaySlide{
 .information{
   display: flex;
   justify-content: center;
+  background: #23424A;
 }
 
 .information h3 {
   text-transform: uppercase;
   font-weight: bold;
   color: beige;
+}
+
+#item-container {
+  position: relative;
+  background: white;
+  margin-bottom: 25px;
+}
+
+.item-container {
+  position: relative;
+  display: flex;
+  background: white;
+  padding: 5px;
+  overflow-x: visible;
+  transition: 2s ease-in-out;
+}
+
+.item-container .items {
+  display: flex;
+  flex: 0 0 100%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.items img {
+  flex: 1 1 calc(25% - 16px);
+  max-width: calc(25% - 16px);
+}
+
+.item-prev{
+  position: absolute;
+  top: 50%;
+  left: -1;
+  z-index: 1;
+  width: 50px;
+}
+
+.item-next{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 1;
+  width: 50px;
+}
+
+.space {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.space .image {
+  position: relative;
+  display: flex;
+  background: white;
+  padding: 5px 0px;
+  flex: 1;
+  width: 100%;
+}
+
+.space img {
+  width: 100%;
 }
 
 

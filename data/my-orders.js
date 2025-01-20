@@ -32,6 +32,7 @@ export function addToOrders() {
   
       const dateString = claculateDeliveryDate(deliveryOption)
       return {
+       productId: item.productId,
        name: matchingProduct.name,
        image: matchingProduct.image,
        quantity: item.quantity,
@@ -42,9 +43,6 @@ export function addToOrders() {
   
   orders.push(order)
   saveToStorage();
-  
-  console.log(orders);
-  
 }
 
 export function getOrderPlacementDate (){
@@ -59,9 +57,6 @@ export function getOrderId (){
 
   return uniqueId;
 }
-
-
-
 
 export function totalOrderCost() {
   let productPrice = 0;

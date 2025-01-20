@@ -108,6 +108,46 @@ function setupNavigation() {
   });
 }
 
+document.getElementById("top-up").addEventListener("click", function(event) {
+  event.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
+
+const itemSlider = document.querySelector('.js-item-container');
+const slideItem = document.querySelectorAll('.js-item')
+const prev = document.querySelectorAll('.js-item-prev');
+const next = document.querySelectorAll('.js-item-next');
+
+
+let currnetIndex = 0;
+
+function updateSlider() {
+  console.log("uuuu");
+  
+  itemSlider.style.transform = `translateX(-${currnetIndex * 100}%)`;
+}
+
+next.forEach( (button) => {
+  button.addEventListener('click', () => {
+    console.log('clk');
+    
+    if (currnetIndex < slideItem.length - 1) {
+      currnetIndex++;
+      
+      updateSlider(); 
+    }
+  })
+})
+
+prev.forEach( (button) => {
+  button.addEventListener('click', () => {
+    if (currnetIndex > 0) {
+      currnetIndex--;
+      updateSlider();
+    }
+     
+  })
+})
 
 
