@@ -157,6 +157,7 @@ img.displaySlide{
 #item-container {
   position: relative;
   background: white;
+  overflow: hidden;
   margin-bottom: 25px;
 }
 
@@ -176,6 +177,7 @@ img.displaySlide{
   justify-content: space-evenly;
   gap: 10px;
   height: 100%;
+  box-sizing: border-box;
   width: 100%;
 }
 
