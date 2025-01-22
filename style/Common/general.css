@@ -1,6 +1,7 @@
 body {
   font-family: Roboto, Arial;
   color: rgb(33, 33, 33);
+  overflow-x: hidden !important;
   background: #F7F3E9;
   margin: 0;
 }
