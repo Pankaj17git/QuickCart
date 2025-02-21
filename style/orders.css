@@ -10,6 +10,7 @@ main{
 
 .order-container {
   background: white;
+  border: 1px solid gainsboro;
 }
 
 .page-title {
@@ -20,7 +21,6 @@ main{
 
 .order-grid {
   display: grid;
-  border: 1px solid gainsboro;
   grid-template-columns: 1fr;
   row-gap: 30px;
 }
