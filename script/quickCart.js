@@ -87,10 +87,6 @@ document.querySelectorAll('.js-add-to-cart')
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-});
-
-
 function  displayProducts(filteredProducts) {
   const productList = document.getElementById("productList");
   
