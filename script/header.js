@@ -74,7 +74,7 @@ export function renderHeader() {
       </div>
 
       <div class="action-item">
-        <a>
+        <a href="login.html">
           <i class="bi bi-person-circle"></i>
           <svg xmlns="http://www.w3.org/2000/svg"  width="36" height="70px" !important fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16" >
             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
@@ -84,7 +84,7 @@ export function renderHeader() {
       </div>
 
       <div class="hamburger-container js-hamburger-container">
-        <img src="images/icons/hamburger-menu.png">
+          <img src="images/icons/hamburger-menu.png">
       </div>
 
       <div class="hidden js-hidden-container">
