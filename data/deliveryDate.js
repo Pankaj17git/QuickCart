@@ -1,4 +1,4 @@
-import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+import { addDays, format } from "https://esm.sh/date-fns@2.30.0?bundle";
 
 export const deliveryOptions = [{
   id: '1',
@@ -28,11 +28,10 @@ export function getDeliveryOption(deliveryOptionId) {
 }
 
 
+
 export function claculateDeliveryDate(deliveryOption) {
-  const today = dayjs();
-  const deliveryDate = today.add(deliveryOption.deliveryDays, 'days');
-
-  const dateString = deliveryDate.format('dddd,MMMM D');
-
+  const today = new Date();
+  const deliveryDate = addDays(today, deliveryOption.deliveryDays);
+  const dateString = format(deliveryDate, "eeee, MMMM d");
   return dateString;
 }
