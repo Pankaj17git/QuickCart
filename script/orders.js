@@ -1,5 +1,6 @@
 import { orders } from "../data/my-orders.js";
 import {renderHeader} from "./header.js"
+import { addToCart } from "../data/cart.js";
 
 renderHeader();
 
@@ -60,7 +61,7 @@ export function renderOrderHistory () {
           Quantity: ${productdDetails.quantity}
         </div>
 
-        <button class="buy-it-again js-buy-it-again button-primary" product-id="${productdDetails.id}">
+        <button class="buy-it-again js-buy-it-again button-primary" data-product-id=${productdDetails.productId}>
           <img src="images/icons/buy-again.png" class="buy-again-image">
           <span>Buy it again</span>
         </button>
@@ -81,10 +82,10 @@ export function renderOrderHistory () {
   document.querySelectorAll('.js-buy-it-again')
   .forEach(button => {
     button.addEventListener('click', () => {
-      const productId = button.dataset.id;
-      const container = button.closest('.product-detail')
+      const productId = button.dataset.productId;
+      const selectedQuantity = 1;
 
-      console.log(productId);
+      addToCart(productId, selectedQuantity);
       
     })
   });
