@@ -1,7 +1,7 @@
 import { cart } from "./cart.js";
 import { getProducts} from "./product.js";
 import { getDeliveryOption,deliveryOptions, claculateDeliveryDate } from "./deliveryDate.js";
-import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+import { addDays, format } from "https://esm.sh/date-fns@2.30.0?bundle";
 import {formatCurrencyRupees } from "../script/utils/money.js";
 
 export let orders = JSON.parse(localStorage.getItem('orders')) || [];
@@ -45,10 +45,9 @@ export function addToOrders() {
   saveToStorage();
 }
 
-export function getOrderPlacementDate (){
-  const today = dayjs();
-  const orderDate = today.format('MMMM D');
-
+export function getOrderPlacementDate() {
+  const today = new Date();
+  const orderDate = format(today, "MMMM d");
   return orderDate;
 }
 

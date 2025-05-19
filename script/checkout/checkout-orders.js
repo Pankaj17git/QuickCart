@@ -1,7 +1,7 @@
 import {getProducts } from "../../data/product.js";
 import { cart, removeFromCart, updateCart, updateDeliveryOption } from "../../data/cart.js";
 import { deliveryOptions, claculateDeliveryDate } from "../../data/deliveryDate.js";
-import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+import { addDays, format } from "https://esm.sh/date-fns@2.30.0?bundle";
 import { formatCurrencyRupees } from "../utils/money.js";
 import { renderPaymentSummary } from "./payment.js";
 
@@ -67,10 +67,9 @@ export function renderOrders() {
     let html = '';
 
     deliveryOptions.forEach((deliveryOption)=> {
-      const today = dayjs();
-      const deliveryDate = today.add(deliveryOption.deliveryDays, 'days');
-
-      const dateString = deliveryDate.format('dddd,MMMM D');
+      const today = new Date();
+      const deliveryDate = addDays(today, deliveryOption.deliveryDays);
+      const dateString = format(deliveryDate, "eeee, MMMM d");
 
       const priceString = deliveryOption.priceCents === 0
       ? "Free"
